@@ -8,6 +8,7 @@
 
 <ion-content padding>
   <div class="container" fxLayout="column" fxLayoutAlign="center center">
+
     <div class="balance-box">
       <ion-label>Current Balance</ion-label>
       <div class="balance-section" fxLayout="row">
@@ -16,5 +17,22 @@
       </div>
       <button ion-button outline round>Hide Balance</button>
     </div>
+
+    <div class="top-box" fxLayout="row">
+      <div class="withdraw-box" fxFlex="150px" fxLayoutAlign="center center" (click)="toWithdraw()">
+        <h1>Withdraw</h1>
+      </div>
+      <div class="value-list" fxFlex="" fxLayout="row" fxLayoutAlign="space-around start" padding>
+        <button ion-button fxFlex="40%">100.000</button>
+        <button ion-button fxFlex="40%">200.000</button>
+        <button ion-button fxFlex="40%">300.000</button>
+        <button ion-button fxFlex="40%">400.000</button>
+      </div>
+      <div class="other-box" fxFlex="150px" fxLayout="column">
+        <h1>Other</h1>
+        <ion-label>Amount</ion-label>
+      </div>
+    </div>
+
   </div>
 </ion-content>

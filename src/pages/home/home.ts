@@ -12,4 +12,8 @@ export class HomePage {
 
   }
 
+  toWithdraw() {
+    // this.navCtrl.
+  }
+
 }
