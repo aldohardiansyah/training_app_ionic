@@ -19,18 +19,38 @@
     </div>
 
     <div class="top-box" fxLayout="row">
-      <div class="withdraw-box" fxFlex="150px" fxLayoutAlign="center center" (click)="toWithdraw()">
+      <div fxFlex="150px" class="left-box" fxLayoutAlign="center center" (click)="toWithdraw()">
         <h1>Withdraw</h1>
       </div>
+
       <div class="value-list" fxFlex="" fxLayout="row" fxLayoutAlign="space-around start" padding>
         <button ion-button fxFlex="40%">100.000</button>
         <button ion-button fxFlex="40%">200.000</button>
         <button ion-button fxFlex="40%">300.000</button>
         <button ion-button fxFlex="40%">400.000</button>
       </div>
-      <div class="other-box" fxFlex="150px" fxLayout="column">
+
+      <div class="other-box" fxLayout="column" fxFlex="150px">
         <h1>Other</h1>
         <ion-label>Amount</ion-label>
+      </div>
+    </div>
+
+    <div class="bottom-box" fxLayout="row">
+      <div class="left-box" fxFlex="150px">
+        <h1>Deposit</h1>
+      </div>
+
+      <div class="value-list" fxFlex="" fxLayout="column">
+        <div class="value-section" fxLayout="row" fxLayoutAlign="space-between start">
+          <ion-label>Tokopedia</ion-label>
+          <ion-label>200.000</ion-label>
+        </div>
+      </div>
+
+      <div class="other-box" fxLayout="column" fxFlex="150px">
+        <h1>More</h1>
+        <ion-label>Services</ion-label>
       </div>
     </div>
 
