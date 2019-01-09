@@ -1,18 +1,33 @@
-<!--
-  Generated template for the DepositPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>deposit</ion-title>
+    <ion-title>Deposit</ion-title>
   </ion-navbar>
-
 </ion-header>
 
-
 <ion-content padding>
+  <div class="container" fxLayout="column" fxLayoutAlign="center center">
+    <div class="balance-box">
+      <ion-label>Current Balance</ion-label>
+      <div class="balance-section" fxLayout="row" [ngClass]="{'hide-balance': !toggleBalance}">
+        <ion-label>IDR</ion-label>
+        <ion-label>273.000</ion-label>
+      </div>
+      <button ion-button outline round (click)="toggle()">Hide Balance</button>
+    </div>
+    <!-- .balance-box -->
 
+    <div class="title-box">
+      <h1>Deposit</h1>
+    </div>
+    <!-- .title-box -->
+
+    <div class="input-box">
+      <ion-item>
+        <ion-label stacked>Amount</ion-label>
+        <ion-input placeholder="250.000"></ion-input>
+      </ion-item>
+      <button ion-button round>Deposit</button>
+    </div>
+    <!-- .input-box -->
+  </div>
 </ion-content>

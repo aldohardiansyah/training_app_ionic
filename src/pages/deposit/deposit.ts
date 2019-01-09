@@ -11,15 +11,21 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 @IonicPage()
 @Component({
   selector: 'page-deposit',
-  templateUrl: 'deposit.html',
+  templateUrl: 'deposit.html'
 })
 export class DepositPage {
+
+  toggleBalance: boolean = true;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DepositPage');
+  }
+
+  toggle() {
+    this.toggleBalance = !this.toggleBalance;
   }
 
 }

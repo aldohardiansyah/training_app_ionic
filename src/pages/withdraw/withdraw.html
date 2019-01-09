@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content padding>
-  <div class="container">
+  <div class="container" fxLayout="column" fxLayoutAlign="center center">
     <div class="balance-box">
       <ion-label>Current Balance</ion-label>
       <div class="balance-section" fxLayout="row" [ngClass]="{'hide-balance': !toggleBalance}">
@@ -15,5 +15,19 @@
       <button ion-button outline round (click)="toggle()">Hide Balance</button>
     </div>
     <!-- .balance-box -->
+
+    <div class="title-box">
+      <h1>Withdraw</h1>
+    </div>
+    <!-- .title-box -->
+
+    <div class="input-box">
+      <ion-item>
+        <ion-label stacked>Amount</ion-label>
+        <ion-input placeholder="250.000"></ion-input>
+      </ion-item>
+      <button ion-button round>Withdraw</button>
+    </div>
+    <!-- .input-box -->
   </div>
 </ion-content>
