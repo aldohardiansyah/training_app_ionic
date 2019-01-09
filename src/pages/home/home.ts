@@ -23,6 +23,10 @@ export class HomePage {
     this.navCtrl.push('WithdrawPage');
   }
 
+  toDeposit() {
+    this.navCtrl.push('DepositPage');
+  }
+
   toggle() {
     this.toggleBalance = !this.toggleBalance;
   }
