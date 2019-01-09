@@ -15,11 +15,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class WithdrawPage {
 
+  toggleBalance: boolean = true;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad WithdrawPage');
+  }
+
+  toggle() {
+    this.toggleBalance = !this.toggleBalance;
   }
 
 }

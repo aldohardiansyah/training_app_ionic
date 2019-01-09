@@ -1,3 +1,9 @@
 page-withdraw {
-
+  ion-content {
+    .container {
+      .hide-balance {
+        visibility: hidden;
+      }
+    }
+  }
 }
