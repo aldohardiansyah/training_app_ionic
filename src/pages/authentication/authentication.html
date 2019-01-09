@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>authenctication</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <div class="container">
+    <div padding>
+      <ion-segment [(ngModel)]="currentPage">
+        <ion-segment-button value="signIn">
+          Sign In
+        </ion-segment-button>
+        <ion-segment-button value="signUp">
+          Sign Up
+        </ion-segment-button>
+      </ion-segment>
+    </div>
+
+    <div [ngSwitch]="currentPage">
+      <div *ngSwitchCase="'signIn'">
+        <ion-input placeholder="Email"></ion-input>
+        <ion-input placeholder="Password"></ion-input>
+        <button ion-button (click)="toHome()">Sign In</button>
+      </div>
+
+      <div *ngSwitchCase="'signUp'">
+        <ion-input placeholder="Email"></ion-input>
+        <ion-input placeholder="Password"></ion-input>
+        <ion-input placeholder="Re-Type Password"></ion-input>
+        <button ion-button>Continue</button>
+      </div>
+    </div>
+  </div>
+</ion-content>
