@@ -8,12 +8,23 @@ import { NavController, IonicPage } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  dummyLists: any;
+  toggleBalance: boolean = true;
 
+  constructor(public navCtrl: NavController) {
+    this.dummyLists = [
+      { name: 'Tokopedia', value: 100000},
+      { name: 'Bukalapak', value: 200000},
+      { name: 'Gojek', value: 300000},
+    ];
   }
 
   toWithdraw() {
-    // this.navCtrl.
+    this.navCtrl.push('WithdrawPage');
+  }
+
+  toggle() {
+    this.toggleBalance = !this.toggleBalance;
   }
 
 }

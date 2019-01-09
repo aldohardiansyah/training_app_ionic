@@ -1,19 +1,42 @@
 page-home {
   ion-content {
     .container {
-       .balance-box {
-         .balance-section {
+      .hide-balance {
+        visibility: hidden;
+      }
 
-         }
-       }
+      .left-box {
+        background: blue;
+        padding: 10px;
 
-       .top-box {
-         width: 600px;
+        h1 {
+          color: white;
+        }
+      }
 
-         .value-list {
-           flex-wrap: wrap;
-         }
-       }
+      .balance-box {
+        .balance-section {
+
+        }
+      }
+
+      .top-box {
+        width: 600px;
+
+        .value-list {
+          flex-wrap: wrap;
+          background: blue;
+
+          button {
+            background: white;
+            color: black;
+          }
+        }
+      }
+
+      .bottom-box {
+        width: 600px;
+      }
     }
   }
 }

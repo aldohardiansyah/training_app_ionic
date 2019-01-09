@@ -11,12 +11,13 @@
 
     <div class="balance-box">
       <ion-label>Current Balance</ion-label>
-      <div class="balance-section" fxLayout="row">
+      <div class="balance-section" fxLayout="row" [ngClass]="{'hide-balance': !toggleBalance}">
         <ion-label>IDR</ion-label>
         <ion-label>273.000</ion-label>
       </div>
-      <button ion-button outline round>Hide Balance</button>
+      <button ion-button outline round (click)="toggle()">Hide Balance</button>
     </div>
+    <!-- .balance-box -->
 
     <div class="top-box" fxLayout="row">
       <div fxFlex="150px" class="left-box" fxLayoutAlign="center center" (click)="toWithdraw()">
@@ -24,10 +25,10 @@
       </div>
 
       <div class="value-list" fxFlex="" fxLayout="row" fxLayoutAlign="space-around start" padding>
-        <button ion-button fxFlex="40%">100.000</button>
-        <button ion-button fxFlex="40%">200.000</button>
-        <button ion-button fxFlex="40%">300.000</button>
-        <button ion-button fxFlex="40%">400.000</button>
+        <button ion-button outline fxFlex="40%">100.000</button>
+        <button ion-button outline fxFlex="40%">200.000</button>
+        <button ion-button outline fxFlex="40%">300.000</button>
+        <button ion-button outline fxFlex="40%">400.000</button>
       </div>
 
       <div class="other-box" fxLayout="column" fxFlex="150px">
@@ -35,16 +36,17 @@
         <ion-label>Amount</ion-label>
       </div>
     </div>
+    <!-- .top-box -->
 
     <div class="bottom-box" fxLayout="row">
-      <div class="left-box" fxFlex="150px">
+      <div class="left-box" fxFlex="150px" fxLayoutAlign="center center">
         <h1>Deposit</h1>
       </div>
 
       <div class="value-list" fxFlex="" fxLayout="column">
-        <div class="value-section" fxLayout="row" fxLayoutAlign="space-between start">
-          <ion-label>Tokopedia</ion-label>
-          <ion-label>200.000</ion-label>
+        <div class="value-section" fxLayout="row" fxLayoutAlign="space-between start" *ngFor="let item of dummyLists" padding>
+          <ion-label no-margin fxFlex="none">{{ item.name }}</ion-label>
+          <ion-label no-margin fxFlex="none">{{ item.value }}</ion-label>
         </div>
       </div>
 
@@ -53,6 +55,7 @@
         <ion-label>Services</ion-label>
       </div>
     </div>
+    <!-- .bottom-box -->
 
   </div>
 </ion-content>
