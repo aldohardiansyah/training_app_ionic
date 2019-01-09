@@ -5,5 +5,5 @@
 # Installations
 - Clone this repository: `git clone https://github.com/ahmadarif/ionic-traning`
 - Goto project directory: `cd ionic-training`
-- Install dependencies: npm install
+- Install dependencies: `npm install`
 - Run apps: `ionic serve`
