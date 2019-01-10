@@ -18,18 +18,20 @@
     </div>
 
     <div [ngSwitch]="currentPage">
-      <div *ngSwitchCase="'signIn'">
-        <ion-input placeholder="Email"></ion-input>
-        <ion-input placeholder="Password"></ion-input>
-        <button ion-button (click)="toHome()">Sign In</button>
+      
+      <div *ngSwitchCase="'signUp'">
+        <ion-input placeholder="Email" [(ngModel)]="credential.email"></ion-input>
+        <ion-input type="password" placeholder="Password" [(ngModel)]="credential.password"></ion-input>
+        <ion-input type="password" placeholder="Re-Type Password" [(ngModel)]="retypePassword"></ion-input>
+        <button ion-button (click)="signUp()">Sign Up</button>
       </div>
 
-      <div *ngSwitchCase="'signUp'">
-        <ion-input placeholder="Email"></ion-input>
-        <ion-input placeholder="Password"></ion-input>
-        <ion-input placeholder="Re-Type Password"></ion-input>
-        <button ion-button>Continue</button>
+      <div *ngSwitchCase="'signIn'">
+        <ion-input placeholder="Email"[(ngModel)]="credential.email"></ion-input>
+        <ion-input type="password" placeholder="Password" [(ngModel)]="credential.password"></ion-input>
+        <button ion-button (click)="signIn()" [disabled]= "credential.email =='' || credential.email==''">Sign In</button>
       </div>
+
     </div>
   </div>
 </ion-content>
